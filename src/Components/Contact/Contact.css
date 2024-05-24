@@ -47,3 +47,13 @@
      margin-top: 5px;
      resize: none;
 }
+/* media query */
+
+@media (max-width:700px) {
+    .contact{
+        display: block;
+    }
+    .contact-col{
+        padding: 20px;
+    }
+}

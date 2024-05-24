@@ -8,9 +8,13 @@ import Campus from './Components/Campus/Campus'
 import Testmonials from './Components/Testmonials/Testmonials'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
+import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
+import { useState } from 'react'
 
 
 function App() {
+  
+  const [playState, setPlayState] = useState(false);
 
   return (
     <div>
@@ -19,7 +23,7 @@ function App() {
       <div className="container">
         <Title subTitle='Our PROGRAM' title='What We Offer'/>
          <Programs />
-         <About />
+         <About  setPlayState={setPlayState}/>
          <Title subTitle='Gallery' title='Campus Photos'/>
         <Campus />
         <Title subTitle='TESTIMONIALS' title='What Student Says'/>
@@ -28,6 +32,7 @@ function App() {
         <Contact />
         <Footer />
        </div>
+       <VideoPlayer playState={playState} setPlayState={setPlayState} />
     </div>
   )
 }
